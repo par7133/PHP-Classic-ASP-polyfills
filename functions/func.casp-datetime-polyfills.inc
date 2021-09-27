@@ -27,18 +27,18 @@
 
  //Classic Asp
  * function is_date(string $date) {}
- * function year(?string $date) {}
- * function month(?string $date) {}
- * function day(?string $date) {}
- * function hour(?string $date) {}
- * function minute(?string $date) {}
- * function second(?string $date) {}
- * function monthName(?string $date) {}
- * function weekday(?string $date) {}
+ * function year(?mixed $date) {}
+ * function month(?mixed $date) {}
+ * function day(?mixed $date) {}
+ * function hour(?mixed $date) {}
+ * function minute(?mixed $date) {}
+ * function second(?mixed $date) {}
+ * function monthName(?mixed $date) {}
+ * function weekday(?mixed $date) {}
  * function now() {}
 
  //other stuff simplified:
- * function date_add1() {}
+ * function date_add1(string $intervalType, int $interval, $date) {}
  *
  */
 
@@ -69,7 +69,7 @@ if (!function_exists("is_date")) {
  * @return string the year of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("year")) { 
-  function year($date): string
+  function year(mixed $date): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
