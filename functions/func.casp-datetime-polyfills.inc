@@ -69,7 +69,7 @@ if (!function_exists("is_date")) {
  * @return string the year of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("year")) { 
-  function year(mixed $date): string
+  function year($date): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
