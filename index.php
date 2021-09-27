@@ -226,3 +226,16 @@ require FUNCTIONS_PATH . DIRECTORY_SEPARATOR . "/func.casp-string-polyfills.inc"
   echo($d1->format("Y/d/m H:i:s A")."<br><br>");
 ?> 
 
+<pre style="width:500px">
+  // date_add1() example #2
+  $d1 = new DateTime("09/27/2021 22:05:55");
+  $d1 = date_add1("d", -5, $d1);
+  echo($d1->format("Y/d/m H:i:s A")."&lt;br&gt;");
+</pre>
+
+<b>Result:</b><br>
+<?php 
+  $d1 = new DateTime("09/27/2021 22:05:55");
+  $d1 = date_add1("d", -5, $d1);
+  echo($d1->format("Y/d/m H:i:s A")."<br><br>");
+?> 

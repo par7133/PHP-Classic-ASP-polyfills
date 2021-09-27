@@ -394,26 +394,26 @@ if (!function_exists("date_add1")) {
        switch($intervalType)
        {
          case "Y":
-           date_sub($date, date_interval_create_from_date_string($interval . ' years'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' years'));
            break;
          case "m":
-           date_sub($date, date_interval_create_from_date_string($interval . ' months'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' months'));
            break;
          case "W":
            $days = $interval * 7;
-           date_sub($date, date_interval_create_from_date_string($interval . ' days'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' days'));
            break;
          case "d":
-           date_sub($date, date_interval_create_from_date_string($interval . ' days'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' days'));
            break;
          case "H":
-           date_sub($date, date_interval_create_from_date_string($interval . ' hours'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' hours'));
            break;
          case "i":
-           date_sub($date, date_interval_create_from_date_string($interval . ' minutes'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' minutes'));
            break;
          case "s":
-           date_sub($date, date_interval_create_from_date_string($interval . ' seconds'));
+           date_sub($date, date_interval_create_from_date_string(abs($interval) . ' seconds'));
            break;
          default:
            return $retval;  
