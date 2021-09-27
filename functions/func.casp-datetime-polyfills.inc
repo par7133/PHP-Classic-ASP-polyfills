@@ -38,7 +38,7 @@
  * function now() {}
 
  //other stuff simplified:
- * function date_add1(string $intervalType, int $interval, $date) {}
+ * function date_add1(string $intervalType, int $interval, ?mixed $date) {}
  *
  */
 
