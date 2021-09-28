@@ -69,7 +69,7 @@ if (!function_exists("is_date")) {
  * @return string the year of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("year")) { 
-  function year($date): string
+  function year($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -98,7 +98,7 @@ if (!function_exists("year")) {
  * @return string the month of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("month")) { 
-  function month($date): string
+  function month($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -127,7 +127,7 @@ if (!function_exists("month")) {
  * @return string the day of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("day")) {
-  function day($date): string
+  function day($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -156,7 +156,7 @@ if (!function_exists("day")) {
  * @return string the hour of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("hour")) {
-  function hour($date): string
+  function hour($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -185,7 +185,7 @@ if (!function_exists("hour")) {
  * @return string the minutes of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("minute")) {
-  function minute($date): string
+  function minute($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -217,7 +217,7 @@ if (!function_exists("minute")) {
  * @return string the seconds of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("second")) {
-  function second($date): string
+  function second($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -249,7 +249,7 @@ if (!function_exists("second")) {
  * @return string the month name of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("monthName")) {
-  function monthName($date): string
+  function monthName($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -278,7 +278,7 @@ if (!function_exists("monthName")) {
  * @return string the week day of the given date, if the date is valid, otherwise a blank string    
  */
 if (!function_exists("weekday")) {
-  function weekday($date): string
+  function weekday($date = null): string
   {
     $retval = "";
     if (isset($date) && ($date instanceof DateTime)) {
@@ -335,7 +335,7 @@ if (!function_exists("now")) {
  * @return the resulting date otherwise false in case of error
  */
 if (!function_exists("date_add1")) {
-  function date_add1(string $intervalType, int $interval, $date)
+  function date_add1(string $intervalType, int $interval, $date = null)
   {
      $retval = false;
      
