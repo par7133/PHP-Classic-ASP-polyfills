@@ -309,7 +309,7 @@ if (!function_exists("now")) {
   function now(): string
   {
       $d = new DateTime();
-      $retval=$d->format("Y/d/m H:i:s A");
+      $retval=$d->format("m/d/Y H:i:s A");
       $d=null;
       return $retval;  
   }

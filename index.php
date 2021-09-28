@@ -213,7 +213,7 @@ require FUNCTIONS_PATH . DIRECTORY_SEPARATOR . "/func.casp-string-polyfills.inc"
 ?> 
 
 <pre style="width:500px">
-  // now() example
+  // now() example #1
   echo(now()."&lt;br&gt;");
 </pre>
 
@@ -223,29 +223,41 @@ require FUNCTIONS_PATH . DIRECTORY_SEPARATOR . "/func.casp-string-polyfills.inc"
 ?> 
 
 <pre style="width:500px">
-  // date_add1() example #1
-  $d1 = new DateTime("09/27/2021 22:05:55");
-  $d1 = date_add1("Y", 1, $d1);
-  echo($d1->format("Y/d/m H:i:s A")."&lt;br&gt;");
+  // now() example #2
+  $d = new DateTime(now());
+  echo($d->format("m/d/Y H:i:s A")."&lt;br&gt;");
 </pre>
 
 <b>Result:</b><br>
 <?php 
-  $d1 = new DateTime("09/27/2021 22:05:55");
-  $d1 = date_add1("Y", 1, $d1);
-  echo($d1->format("Y/d/m H:i:s A")."<br><br>");
+  $d = new DateTime(now());
+  echo($d->format("m/d/Y H:i:s A")."<br><br>");
+?> 
+
+<pre style="width:500px">
+  // date_add1() example #1
+  $d = new DateTime("09/27/2021 22:05:55");
+  $d = date_add1("Y", 1, $d);
+  echo($d->format("Y/d/m H:i:s A")."&lt;br&gt;");
+</pre>
+
+<b>Result:</b><br>
+<?php 
+  $d = new DateTime("09/27/2021 22:05:55");
+  $d = date_add1("Y", 1, $d);
+  echo($d->format("Y/d/m H:i:s A")."<br><br>");
 ?> 
 
 <pre style="width:500px">
   // date_add1() example #2
-  $d1 = new DateTime("09/27/2021 22:05:55");
-  $d1 = date_add1("d", -5, $d1);
-  echo($d1->format("Y/d/m H:i:s A")."&lt;br&gt;");
+  $d = new DateTime("09/27/2021 22:05:55");
+  $d = date_add1("d", -5, $d);
+  echo($d->format("Y/d/m H:i:s A")."&lt;br&gt;");
 </pre>
 
 <b>Result:</b><br>
 <?php 
-  $d1 = new DateTime("09/27/2021 22:05:55");
-  $d1 = date_add1("d", -5, $d1);
-  echo($d1->format("Y/d/m H:i:s A")."<br><br>");
+  $d = new DateTime("09/27/2021 22:05:55");
+  $d = date_add1("d", -5, $d);
+  echo($d->format("Y/d/m H:i:s A")."<br><br>");
 ?> 
