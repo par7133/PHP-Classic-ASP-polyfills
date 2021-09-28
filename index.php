@@ -119,6 +119,17 @@ require FUNCTIONS_PATH . DIRECTORY_SEPARATOR . "/func.casp-string-polyfills.inc"
 ?> 
 
 <pre style="width:500px">
+  // year() example #3
+  echo(year()."&lt;br&gt;");
+</pre>
+
+<b>Result:</b><br>
+<?php 
+  echo(year()."<br><br>");
+?> 
+
+
+<pre style="width:500px">
   // month() example
   $v = new DateTime("09/27/2021");
   echo(month($v)."&lt;br&gt;");
