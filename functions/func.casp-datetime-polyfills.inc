@@ -374,7 +374,7 @@ if (!function_exists("date_add1")) {
            break;
          case "W":
            $days = $interval * 7;
-           date_add($d, date_interval_create_from_date_string($interval . ' days'));
+           date_add($d, date_interval_create_from_date_string($days . ' days'));
            break;
          case "d":
            date_add($d, date_interval_create_from_date_string($interval . ' days'));
@@ -404,7 +404,7 @@ if (!function_exists("date_add1")) {
            break;
          case "W":
            $days = $interval * 7;
-           date_sub($d, date_interval_create_from_date_string(abs($interval) . ' days'));
+           date_sub($d, date_interval_create_from_date_string(abs($days) . ' days'));
            break;
          case "d":
            date_sub($d, date_interval_create_from_date_string(abs($interval) . ' days'));
